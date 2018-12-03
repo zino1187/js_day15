@@ -14,8 +14,9 @@ class Hero extends GameObject{
 		//다수의 벽돌을 대상으로 충돌검사!!!
 		for(var i=0;i<blockArray.length;i++){
 			var hit=collisionCheck(this, blockArray[i]);
-			if(hit){
+			if(hit){//벽돌과 마주쳤다면, 벽돌 위에 있어야 한다..
 				blockArray[i].div.style.background="pink";
+				this.y=blockArray[i].y - this.height;//고정!!
 			}
 		}
 
