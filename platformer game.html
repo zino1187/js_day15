@@ -13,15 +13,34 @@
 </style>
 <script src="./GameObject.js"></script>
 <script src="./Block.js"></script>
+<script src="./Hero.js"></script>
+<script src="../lib/common.js"></script>
 <script>
 var stage;
+var hero;
+var blockArray=[]; //생성된 블럭은 배열에 담겨 있어야, 충돌검사
+							//시 for문을 적용할 수 있다..
+
 function init(){
 	stage=document.getElementById("stage");
+	createBlock();
+	createHero();
+	gameLoop();
 }
 function createBlock(){
+	for(var i=0;i<15;i++){
+		var block=new Block(stage,35,35,50+((35+1)*i),400,0,0,"blue");
+
+		blockArray.push(block);//배열에 담기!!
+	}
+}
+function createHero(){
+	hero = new Hero(stage,45,100,50,50,0,5,"red");
 }
 function gameLoop(){
-	setTimeout("gameLoop()",10);
+	hero.tick();
+	hero.render();
+	setTimeout("gameLoop()",1);
 }
 
 addEventListener("load", function(){
