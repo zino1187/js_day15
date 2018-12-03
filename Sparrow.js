@@ -19,7 +19,7 @@ class Sparrow extends Bird{
 		//객체지향 언어에서는 자식을 초기화 하기 전에
 		//반드시 부모가 먼저 초기화 되어 있어야 한다.
 		//따라서 생성자의 첫줄에 super() 명시되어야 한다
-		super();//부모의 constructor()
+		super("난참새",2);//부모의 constructor()
 		this.color="brown";
 	}
 	//자식이 부모의 메서드를 재정의할수 있도록 허용해준다

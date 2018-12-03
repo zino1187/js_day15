@@ -11,6 +11,23 @@
 	background:yellow;
 }
 </style>
+<script src="./GameObject.js"></script>
+<script src="./Block.js"></script>
+<script>
+var stage;
+function init(){
+	stage=document.getElementById("stage");
+}
+function createBlock(){
+}
+function gameLoop(){
+	setTimeout("gameLoop()",10);
+}
+
+addEventListener("load", function(){
+	init();
+});
+</script>
 </head>
 <body>
 	<div id="stage"></div>
