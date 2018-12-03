@@ -26,6 +26,16 @@ function init(){
 	createBlock();
 	createHero();
 	gameLoop();
+
+	addEventListener("keydown", function(){
+		var key=event.keyCode;
+		switch(key){
+			case 32:hero.jump();	break;
+			case 37:hero.velX=-5;break;
+			case 39:hero.velX=5;	break;
+		}
+
+	});
 }
 function createBlock(){
 	for(var i=0;i<15;i++){
@@ -38,8 +48,8 @@ function createHero(){
 	hero = new Hero(stage,45,100,50,50,0,5,"red");
 }
 function gameLoop(){
-	hero.tick();
-	hero.render();
+	hero.tick();//내꺼!!
+	hero.render();//나한테 없으므로, 부모꺼 호출
 	setTimeout("gameLoop()",1);
 }
 
