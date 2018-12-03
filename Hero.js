@@ -41,8 +41,8 @@ class Hero extends GameObject{
 		}
 
 		//주인공을 해당 벽돌에 멈추게 한다 
-		if(hitCount>0){ //서있게 처리..
-			
+		if( hitCount>0){ //서있게 처리..
+						
 		}else{//다시 떨어지게..
 			this.velY+=this.g;//가속도 값 누적!!
 			this.y+=this.velY;//누적된 값을 y에 적용..

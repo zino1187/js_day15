@@ -40,15 +40,21 @@ function init(){
 		var key=event.keyCode;
 		hero.velX=0;
 	});
-
-
 }
+
 function createBlock(){
 	for(var i=0;i<15;i++){
 		var block=new Block(stage,35,35,50+((35+1)*i),400,0,0,"blue");
 
 		blockArray.push(block);//배열에 담기!!
 	}
+
+	for(var i=0;i<8;i++){
+		var block=new Block(stage,35,35,450+((35+1)*i),320,0,0,"blue");
+
+		blockArray.push(block);//배열에 담기!!
+	}
+
 }
 function createHero(){
 	hero = new Hero(stage,45,100,50,50,0,5,"red");
