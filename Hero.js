@@ -11,8 +11,13 @@ class Hero extends GameObject{
 		this.velY+=this.g;
 		this.y = this.y+this.velY;
 
-		//충돌검사!!!
-		var hit=collisionCheck(this, blockArray[i]);
+		//다수의 벽돌을 대상으로 충돌검사!!!
+		for(var i=0;i<blockArray.length;i++){
+			var hit=collisionCheck(this, blockArray[i]);
+			if(hit){
+				blockArray[i].div.style.background="pink";
+			}
+		}
 
 	}
 }
