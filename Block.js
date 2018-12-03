@@ -10,5 +10,6 @@ class Block extends GameObject{
 		//부모 객체의 GameObject의 멤버변수로 전달될 것이고, 
 		//그 전달된 매개변수는 내꺼다!!
 		super(container,width,height,x,y,velX,velY,bg);
+		this.hit=false;//밟혔는지 여부를 체크하는 논리값!!
 	}
 }

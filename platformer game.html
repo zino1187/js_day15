@@ -32,10 +32,16 @@ function init(){
 		switch(key){
 			case 32:hero.jump();	break;
 			case 37:hero.velX=-5;break;
-			case 39:hero.velX=5;	break;
+			case 39:hero.velX=5;break;
 		}
-
 	});
+
+	addEventListener("keyup", function(){
+		var key=event.keyCode;
+		hero.velX=0;
+	});
+
+
 }
 function createBlock(){
 	for(var i=0;i<15;i++){
